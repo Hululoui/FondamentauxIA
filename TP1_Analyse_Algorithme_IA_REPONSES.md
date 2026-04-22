@@ -1,35 +1,9 @@
 # TP1 — Analyse d'un algorithme en fonctionnement
 
-| | |
-|---|---|
-| **Matière** | Les fondamentaux de l'IA |
-| **Niveau** | Bachelor 3 |
-| **Durée** | 30–45 min |
-
----
-
-## Objectifs pédagogiques
-
-- Observer un pipeline ML complet de bout en bout
-- Mesurer des métriques de performance (accuracy, F1, confusion matrix)
-- Détecter le sur/sous-apprentissage (overfitting)
-- Initier l'explicabilité avec SHAP
-
----
 
 ## Contexte
 
 Ce TP ne demande **aucune expertise mathématique**. L'objectif est de **voir comment un algorithme apprend**, de mesurer ses performances avec des métriques adaptées, et de comprendre ses décisions grâce à l'explicabilité. Vous utiliserez Python, scikit-learn et SHAP comme boîtes noires intelligentes sur des données réelles.
-
----
-
-## Prérequis
-
-```bash
-pip install scikit-learn matplotlib pandas numpy seaborn shap
-```
-
-Ou directement sur **Google Colab** (aucune installation) : [colab.research.google.com](https://colab.research.google.com)
 
 ---
 
@@ -336,35 +310,3 @@ plt.show()
 **Explication :** Ce résultat est cohérent avec ce qu'on observait visuellement dès l'étape 1. Ce qui est intéressant avec SHAP, c'est qu'il ne donne pas juste une importance globale — il explique chaque prédiction individuellement. Si le résultat avait contredit l'intuition, ça aurait été un signal d'alerte sur la qualité des données ou la logique du modèle.
 
 **Implication pratique :** L'explicabilité n'est pas optionnelle dans les secteurs réglementés. Le RGPD et l'AI Act européen imposent de pouvoir justifier toute décision automatisée impactant une personne. SHAP est l'un des outils qui permet de répondre à cette obligation, tout en servant aussi à détecter des biais potentiels avant qu'ils ne posent problème.
-
----
-
-## Livrables
-
-| Livrable | Description |
-|---|---|
-| Notebook propre | Code exécuté, cellules commentées, sans erreurs |
-| Métriques détaillées | Tableau comparatif Decision Tree vs Random Forest (accuracy, F1) |
-| Capture SHAP | Screenshot du summary plot annoté |
-
----
-
-## Critères d'évaluation
-
-| Critère | Points |
-|---|:---:|
-| Code fonctionnel et exécutable | 4 |
-| Analyse des métriques (accuracy, F1, confusion matrix) | 4 |
-| Compréhension overfitting + graphique commenté | 4 |
-| Explicabilité SHAP : capture + analyse | 4 |
-| 3 insights débrief : pertinence et justification | 4 |
-| **Total** | **20** |
-
----
-
-## Ressources
-
-- [scikit-learn — Documentation officielle](https://scikit-learn.org)
-- [SHAP — Documentation](https://shap.readthedocs.io)
-- [Google Colab](https://colab.research.google.com)
-- [Dataset Iris — UCI ML Repository via seaborn-data](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv)
